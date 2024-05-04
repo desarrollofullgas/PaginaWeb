@@ -1,0 +1,29 @@
+---
+import { Image } from "astro:assets";
+import LinksContainer from "./LinksContainer.astro";
+import logo from '../img/Logo.png';
+import Menu from "../icons/Menu.astro";
+import Close from "../icons/Close.astro";
+---
+<header class=" sticky top-0  z-50" transition:animate="none">
+    <nav class=" border border-slate-950 m-auto sm:mt-3 max-w-7xl sm:rounded-t-2xl rounded-b-2xl px-4 py-2 sm:flex justify-between gap-2 items-center bg-slate-950 bg-opacity-90 backdrop-blur-sm" x-data="{expand:false}">
+        <div class="flex justify-between gap-2">
+            <a href="/">
+                <figure class="w-40">
+                    <Image src={logo} alt="logo FullGas" class="w-full aspect-[16/6]"/>
+                </figure>
+            </a>
+            <button @click="expand=!expand" aria-label="menu" class="sm:hidden text-slate-200">
+                <div x-show="!expand">
+                    <Menu clases="size-8"/>
+                </div>
+                <div x-show="expand">
+                    <Close clases="size-8"/>
+                </div>
+            </button>
+        </div>
+        <div :class="expand?' left-0 right-0':'hidden sm:flex'">
+            <LinksContainer/>
+        </div>
+    </nav>
+</header>

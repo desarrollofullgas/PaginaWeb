@@ -1,0 +1,14 @@
+---
+interface Props {
+    bg:string;
+}
+const {bg}=Astro.props;
+---
+<div class="parallax w-full border">
+    <slot/>
+</div>
+<style>
+    .parallax{
+
+    }
+</style>

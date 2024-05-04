@@ -1,0 +1,23 @@
+{
+  "name": "fullgasweb",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.13.10",
+    "@astrojs/alpinejs": "^0.4.0",
+    "@astrojs/tailwind": "^5.1.0",
+    "@astrojs/vue": "^4.1.0",
+    "@types/alpinejs": "^3.13.10",
+    "alpinejs": "^3.13.10",
+    "astro": "^4.7.0",
+    "tailwindcss": "^3.4.3",
+    "vue": "^3.4.26"
+  }
+}

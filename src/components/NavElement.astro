@@ -1,0 +1,14 @@
+---
+interface Props {
+    href: string;
+    tittle: string;
+}
+const {href, tittle}=Astro.props;
+//Obtenemos el path actual del navegdor y verificamos si coincide con el href que recibimos
+const path=Astro.url.pathname;
+const currentPath=href===path? true : false;
+---
+<li class={"flex flex-col justify-center max-sm:py-1 group font-semibold "+(currentPath?'text-red-400':'text-gray-300')}>
+    <a href={href} class="mx-2 text-center text-balance">{tittle}</a>
+    <div class={"group-hover:w-full h-0.5 sm:h-1 bg-red-700 transition-all duration-300 "+(currentPath?'w-full':'w-full sm:w-0')}></div>
+</li>

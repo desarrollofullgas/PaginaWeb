@@ -1,0 +1,22 @@
+---
+
+import Estaciones from "../components/vue/Estaciones.vue";
+import World from "../icons/World.astro";
+import Layout from "../layouts/Layout.astro";
+/* import estacionesService from "../services/estacionesService";
+const lista= new estacionesService();
+console.log(lista.groupByestado()); */
+---
+<Layout title="Ubicaciones">
+	<Estaciones client:load/>
+	<div class="bg-red-800 text-red-100 rounded-r-md flex flex-row-reverse items-center sm:hidden fixed left-0 bottom-32 transition-[width,height] duration-300" :class="!toggle ? 'size-12':'w-36 h-20'" x-data="{toggle:false}" x-on:click.away="toggle=false">
+		<div class="p-2 w-fit h-fit" x-on:click="toggle=!toggle">
+			<World clases="size-8"/>
+		</div>
+		<div class="flex flex-col gap-2 p-2 overflow-hidden transition-[width] duration-300" :class="!toggle?'max-w-0 p-0':'max-w-52'">
+			<a href="#mx" target="_self" class="font-semibold">México</a>
+			<a href="#gt" target="_self" class="font-semibold">Guatemala</a>
+		</div>
+	</div>
+</Layout>
+ 

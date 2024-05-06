@@ -1,13 +1,87 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import EnlaceLF from "../components/EnlaceLF.astro";
+import ArticlesCount from "../components/ArticlesCount.astro";
+import AditivoSection from "../components/AditivoSection.astro";
+import CountSection from "../components/CountSection.astro";
+import HeroSection from "../components/HeroSection.astro";
+import AboutUs from "../components/about/AboutUs.astro";
+import Layout from "../layouts/Layout.astro";
+import NewsNav from "../components/NewsNav.astro";
+import newone from "../img/NOTICIA1.jpg";
+import newtwo from "../img/NOTICIA2.jpg";
+import newthree from "../img/NOTICIA3.jpg";
 ---
 
 <Layout title="FullGas">
-	<div class="w-11/12 h-lvh m-auto bg-purple-400 p-3"></div>
-	<div class="w-11/12 h-lvh m-auto bg-purple-400 p-3"></div>
+	<HeroSection
+		title=`LÍDERES DEL <span
+			class="text-red-500 dark:text-red-400">LIBRE MERCADO</span> DE COMBUSTIBLE`
+		primaryBtn="FACTURA AQUÍ"
+		primaryBtnURL="/products"
+		secondaryBtn="VALES Y TARJETAS"
+		secondaryBtnURL="/contact"
+		alt="FullGas Gasolineras"
+	>
+		<video
+			slot="background"
+			class="object-center object-cover h-full w-full"
+			autoplay
+			muted
+			loop
+			src="src/video/original.mp4"
+		>
+		</video>
+	</HeroSection>
+	<AboutUs
+		title="FULLGAS GASOLINERAS"
+		subTitle="SOMOS UNA EMPRESA REFERENTE, LÍDER EN HOSPITALIDAD, DESPACHANDO, DESDE HACE MÁS DE 40 AÑOS, BUEN TRATO."
+		benefits={[
+			"Encuentranos en +14 estados de la república méxicana y en centroamérica.",
+			"Personal 100% capacitado.",
+		]}
+	/>
+	<AditivoSection/>
 
+	<CountSection fondo="/src/img/fullgas.jpg" textColor="white">
+		<div class="flex flex-wrap items-center justify-center gap-2 px-2 py-5">
+			<div class="mx-auto max-w-7xl px-6 lg:px-8">
+				<ArticlesCount />
+			</div>
+		</div>
+	</CountSection>
+	<EnlaceLF thirdBtn="Más Información" thirdBtnURL="/" />
+	<NewsNav
+		title=`NOTICIAS <span class="text-red-500 dark:text-red-400">FULLGAS</span>.`
+		tabs={[
+			{
+				heading:
+					"CIERRAN GASOLINERA DE EMPRESA MEXICANA POR VOLCÁN EN GUATEMALA",
+				content:
+					"La reapertura de su gasolinera dependerá del visto bueno de Protección Civil, que revisará las instalaciones y les ayudará a retirar la ceniza de la estación.",
+				svg: "tools",
+				src: newone,
+				alt: "FULLGAS ERUPCION VOLCAN GUATEMALA",
+				first: true,
+			},
+			{
+				heading:
+					"FULLGAS VA POR PEQUEÑOS GASOLINEROS: LANZA SU PROPIA LICENCIA.",
+				content:
+					"Su meta es abanderar a 360 gasolineras del país con sus colores. Para lograrlo, desembolsará 70 millones de dólares en un plazo de cinco años.",
+				svg: "dashboard",
+				src: newtwo,
+				alt: "LICENCIA FULLGAS",
+				second: true,
+			},
+			{
+				heading:
+					"FULLGAS TAMBIEN VA A LA GUERRA LANZA SU MARCA DE GASOLINERAS",
+				content:
+					"La primera fase incluye 10 estaciones nuevas. En agosto, 15 más cambiarán su bandera.",
+				svg: "house",
+				src: newthree,
+				alt: "FULLGAS MARCAS",
+			},
+		]}
+	/>
 </Layout>
-
-<style>
-
-</style>

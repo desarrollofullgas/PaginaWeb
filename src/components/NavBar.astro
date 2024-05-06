@@ -5,9 +5,9 @@ import logo from '../img/Logo.png';
 import Menu from "../icons/Menu.astro";
 import Close from "../icons/Close.astro";
 ---
-<header class=" sticky top-0  z-50" transition:animate="none">
-    <nav class=" border border-slate-950 m-auto sm:mt-3 max-w-7xl sm:rounded-t-2xl rounded-b-2xl px-4 py-2 sm:flex justify-between gap-2 items-center bg-slate-950 bg-opacity-90 backdrop-blur-sm" x-data="{expand:false}">
-        <div class="flex justify-between gap-2">
+<header class=" sticky inset-x-0 top-4 z-50 flex w-full flex-wrap text-sm md:flex-nowrap md:justify-start" transition:animate="none">
+    <nav class="relative mx-2 w-full rounded-[36px] border border-gray-950/40 bg-gray-950/60 px-4 py-3 backdrop-blur-md dark:border-neutral-700/40 dark:bg-neutral-800/80 dark:backdrop-blur-md md:flex md:items-center md:justify-between md:px-6 md:py-0 lg:px-8 xl:mx-auto" aria-label="Global" x-data="{expand:false}">
+        <div class="flex justify-between items-center">
             <a href="/">
                 <figure class="w-40">
                     <Image src={logo} alt="logo FullGas" class="w-full aspect-[16/6]"/>

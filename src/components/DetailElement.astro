@@ -1,0 +1,11 @@
+---
+import Check from '../icons/check.astro';
+interface Props {
+    text: string;
+}
+const {text} = Astro.props;
+---
+<li class="flex gap-2">
+    <Check clases="size-6 min-w-6 text-green-600"/>
+    <span>{text}</span>
+</li>

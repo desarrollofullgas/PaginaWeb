@@ -8,6 +8,8 @@ import img02 from '../img/img02.png';
 import Check from "../icons/check.astro";
 import SectionImageLeft from "../components/SectionImageLeft.astro";
 import SectionImageRigth from "../components/SectionImageRigth.astro";
+import DetailsContainer from "../components/DetailsContainer.astro";
+import DetailElement from "../components/DetailElement.astro";
 ---
 <Layout title="Vales y tarjetas">
 
@@ -33,35 +35,31 @@ import SectionImageRigth from "../components/SectionImageRigth.astro";
             </div>
         </Parallax>
     </section>
-    <SectionImageLeft>
+    <SectionImageLeft tittle="Vales de gasolina">
         <Picture src={img01} slot="image" alt="vales" class="rounded-md overflow-hidden"/>
-        <div slot="list">
-            <h2 class="mb-2 text-4xl font-semibold">Vales de gasolina</h2>
-            <p class="text-lg">
-                Nuestros vales prepago son la mejor opción del mercado, ya que brindan los siguientes beneficios:
-            </p>
-            <br>
-            <ul class="flex flex-col gap-2 font-semibold">
-                <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>0% de comisión.</span></li>
-                <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Controladores de seguridad que evitan duplicidad y falsificaciones.</span></li>
-                <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Deducible 100% ante el SAT.</span></li>
-                <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Facturación en base a tus necesidades.</span></li>
-                <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Entrega inmediata.</span></li>
-            </ul>
-        </div>
+        <p slot="description" class="text-lg mb-6">
+            Nuestros vales prepago son la mejor opción del mercado, ya que brindan los siguientes beneficios:
+        </p>
+        <DetailsContainer slot="list">
+            <DetailElement text="0% de comisión."/>
+            <DetailElement text="Controladores de seguridad que evitan duplicidad y falsificaciones."/>
+            <DetailElement text="Deducible 100% ante el SAT."/>
+            <DetailElement text="Facturación en base a tus necesidades."/>
+            <DetailElement text="Entrega inmediata."/>
+        </DetailsContainer>
     </SectionImageLeft>
     <SectionImageRigth tittle="Tarjetas de gasolina">
         <p class="text-lg mb-6" slot="description">
             Éste ha sido por años , uno de los beneficios más grandes de FullGas, ya que estas tarjetas permiten establecer ciertos montos para cada uno de los choferes de una empresa o manejar tarjetas abiertas.
         </p>
-        <ul slot="list" class="flex flex-col gap-2 font-semibold">
-            <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Sin comisión.</span></li>
-            <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Sin Costo de expedición o sustitución.</span></li>
-            <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Comprobante electrónico de carga en litros y monto.</span></li>
-            <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Permisos establecidos y carga libre.</span></li>
-            <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Consulta de rendimientos y consumos a través de internet.</span></li>
-            <li class="flex gap-2"><Check clases="size-6 min-w-6 text-green-600"/><span>Tranferencia de saldos entre tarjetas.</span></li>
-        </ul>
+        <DetailsContainer slot="list">
+            <DetailElement text="Sin comisión."/>
+            <DetailElement text="Sin Costo de expedición o sustitución."/>
+            <DetailElement text="Comprobante electrónico de carga en litros y monto."/>
+            <DetailElement text="Permisos establecidos y carga libre."/>
+            <DetailElement text="Consulta de rendimientos y consumos a través de internet."/>
+            <DetailElement text="Tranferencia de saldos entre tarjetas."/>
+        </DetailsContainer>
         <Picture src={img02} slot="image" alt="tarjeta" class="rounded-md overflow-hidden drop-shadow-md"/>
     </SectionImageRigth>
 </Layout>

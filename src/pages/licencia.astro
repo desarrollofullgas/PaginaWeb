@@ -3,13 +3,17 @@ import { Image, Picture } from "astro:assets";
 import Parallax from "../components/Parallax.astro";
 import Layout from "../layouts/Layout.astro";
 import logo2 from "../img/logo2.png";
-import logo from "../img/Logo.png";
+import FullPower from "../img/fullpower.png";
 import Card from "../components/Card.astro";
 import ChartBar from "../icons/ChartBar.astro";
 import GraduationHat from "../icons/GraduationHat.astro";
 import Users from "../icons/Users.astro";
 import SectionImageRigth from "../components/SectionImageRigth.astro";
 import img03 from "../img/img03.jpg";
+import img04 from "../img/img04.jpg";
+import SectionImageLeft from "../components/SectionImageLeft.astro";
+import DetailsContainer from "../components/DetailsContainer.astro";
+import DetailElement from "../components/DetailElement.astro";
 ---
 <Layout title="Licencias">
     <section class="mt-3">
@@ -31,7 +35,7 @@ import img03 from "../img/img03.jpg";
                     <Image src={logo2} alt="logo fullgas"/>
                 </figure>
                 <figure class="max-w-72">
-                    <Image src={logo} alt="Full Power"/>
+                    <Image src={FullPower} alt="Full Power"/>
                 </figure>
             </div>
         </div>
@@ -58,10 +62,22 @@ import img03 from "../img/img03.jpg";
             </Card>
         </div>
     </section>
-    <SectionImageRigth>
-        <Picture src={img03} slot="image" alt=""/>
-        <div slot="list">
-            <h2 class="mb-2 text-4xl font-semibold">Tarjetas de gasolina</h2>
-        </div>
+    <SectionImageRigth tittle="¿Cómo funciona el programa?">
+        <Picture src={img03} slot="image" alt="" class="rounded-md overflow-hidden"/>
+        <DetailsContainer slot="list" clases="mt-6">
+            <DetailElement text="Mantienes la propiedad de tu negocio."/>
+            <DetailElement text="Sin preocupacón de los sistemas de administración y tecnología."/>
+            <DetailElement text="Maximiza tus utilidades por escala y volúmen."/>
+            <DetailElement text="Especialistas en lógistica de almacenamiento y distribución."/>
+        </DetailsContainer>
     </SectionImageRigth>
+    <SectionImageLeft tittle="Ventajas del programa">
+        <Picture src={img04} slot="image" alt="" class="rounded-md overflow-hidden"/>
+        <DetailsContainer slot="list" clases="mt-6">
+            <DetailElement text="Maximizas la rentabilidad de tú propiedad."/>
+            <DetailElement text="Patrimonio respaldado por una empresa global con experiencia."/>
+            <DetailElement text="Contratos flexibles y sin penalizaciones."/>
+            <DetailElement text="Nos encargamos de todos los aspectos operativos, logísticos y jurídicos."/>
+        </DetailsContainer>
+    </SectionImageLeft>
 </Layout>

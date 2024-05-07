@@ -13,25 +13,27 @@ import newthree from "../img/NOTICIA3.jpg";
 ---
 
 <Layout title="FullGas">
-	<HeroSection
-		title=`LÍDERES DEL <span
+	<div class="max-w-7xl">
+		<HeroSection
+			title=`LÍDERES DEL <span
 			class="text-red-500 dark:text-red-400">LIBRE MERCADO</span> DE COMBUSTIBLE`
-		primaryBtn="FACTURA AQUÍ"
-		primaryBtnURL="/products"
-		secondaryBtn="VALES Y TARJETAS"
-		secondaryBtnURL="/contact"
-		alt="FullGas Gasolineras"
-	>
-		<video
-			slot="background"
-			class="object-center object-cover h-full w-full"
-			autoplay
-			muted
-			loop
-			src="src/video/original.mp4"
+			primaryBtn="FACTURA AQUÍ"
+			primaryBtnURL="/products"
+			secondaryBtn="VALES Y TARJETAS"
+			secondaryBtnURL="/contact"
+			alt="FullGas Gasolineras"
 		>
-		</video>
-	</HeroSection>
+			<video
+				slot="background"
+				class="object-center object-cover h-full w-full"
+				autoplay
+				muted
+				loop
+				src="src/video/original.mp4"
+			>
+			</video>
+		</HeroSection>
+	</div>
 	<AboutUs
 		title="FULLGAS GASOLINERAS"
 		subTitle="SOMOS UNA EMPRESA REFERENTE, LÍDER EN HOSPITALIDAD, DESPACHANDO, DESDE HACE MÁS DE 40 AÑOS, BUEN TRATO."
@@ -40,7 +42,7 @@ import newthree from "../img/NOTICIA3.jpg";
 			"Personal 100% capacitado.",
 		]}
 	/>
-	<AditivoSection/>
+	<AditivoSection />
 
 	<CountSection fondo="/src/img/fullgas.jpg" textColor="white">
 		<div class="flex flex-wrap items-center justify-center gap-2 px-2 py-5">

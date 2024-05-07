@@ -5,7 +5,7 @@ interface Props {
 };
 const {fondo,textColor}=Astro.props;
 ---
-<section class="parallax w-full bg-no-repeat bg-cover bg-fixed rounded-2xl" style={'background-image:url('+fondo+')'}>
+<section class="parallax w-full bg-no-repeat bg-cover bg-fixed" style={'background-image:url('+fondo+')'}>
     <slot/>
 </section>
 <style define:vars={{textColor}}>

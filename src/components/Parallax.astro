@@ -4,11 +4,13 @@ interface Props {
 }
 const {bg}=Astro.props;
 ---
-<div class="parallax w-full border">
-    <slot/>
+<div class="parallax bg-no-repeat bg-cover  bg-fixed" style={'background-image:url('+bg+')'}>
+    <div class="w-full bg-slate-950 bg-opacity-55 p-2">
+        <slot/>
+    </div>
 </div>
 <style>
     .parallax{
-
+        background-position: center top;
     }
 </style>

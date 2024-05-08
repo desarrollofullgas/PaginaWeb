@@ -32,10 +32,10 @@ interface Props {
 
 <!-- Definir un contenedor de cuadrícula que contenga todo el contenido. -->
 <div
-  class="h-screen w-screen mx-auto grid  gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full overflow-hidden"
+  class="h-screen w-screen mx-auto grid gap-4 px-4 py-14 sm:px-6 md:grid-cols-2 md:items-center md:gap-8 lg:px-8 2xl:max-w-full overflow-hidden"
 >
   <!-- Titulo y Descripción -->
-  <div>
+  <div class="text-center">
     <!-- Cada etiqueta h1 y p representa una parte del título y subtítulo definidos anteriormente. -->
     <h1
       class="block text-balance text-3xl font-bold tracking-tight text-neutral-100 dark:text-neutral-200 sm:text-4xl lg:text-6xl lg:leading-tight"
@@ -51,7 +51,7 @@ interface Props {
     </p>
   }
     <!-- Sección de Botones CTA: Cada CTA incluye su propio estilo y url -->
-    <div class="mt-7 grid w-full gap-3 sm:inline-flex">
+    <div class="text-center items-center justify-center mt-7 grid w-full gap-3 sm:inline-flex">
       {primaryBtn && 
       <PrimaryCTA title={primaryBtn} url={primaryBtnURL} />
       }

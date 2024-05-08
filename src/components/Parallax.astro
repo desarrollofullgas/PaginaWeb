@@ -1,16 +1,16 @@
 ---
 interface Props {
     fondo:string,
-    textColor:string
 };
-const {fondo,textColor}=Astro.props;
+const {fondo}=Astro.props;
 ---
-<section class="parallax w-full bg-no-repeat bg-cover bg-fixed" style={'background-image:url('+fondo+')'}>
-    <slot/>
+<section class="parallax bg-no-repeat bg-cover bg-fixed" style={'background-image:url('+fondo+')'}>
+    <div class="w-full bg-slate-950 bg-opacity-55 p-2">
+        <slot/>
+    </div>
 </section>
-<style define:vars={{textColor}}>
+<style>
 .parallax{
     background-position: center top;
-    color: var(--textColor);
 }
 </style>

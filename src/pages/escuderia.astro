@@ -8,6 +8,8 @@ import OfertaRally from "../components/OfertaRally.astro";
 import HeroAlt from "../components/HeroAlt.astro";
 import Parallax from "../components/Parallax.astro";
 import { images } from "../constants/images";
+import Facebook from "../icons/facebook.astro";
+import Instagram from "../icons/instagram.astro";
 const scufullgas = images.filter((image) => image.category === "scu");
 const columnright = scufullgas.filter((image) => image.column == "right");
 const columnmiddle = scufullgas.filter((image) => image.column == "middle");
@@ -29,8 +31,9 @@ const columnleft = scufullgas.filter((image) => image.column == "left");
             <div class="w-1/2 flex items-center justify-center flex-col">
                 <!-- Contenido de la columna izquierda -->
                 <p class="text-center font-bold text-3xl text-neutral-300">
-                    ¿Sabías que la entrada a nuestra Scuderia es totalmente
-                    gratuita?
+                    ¿Sabías que la entrada a nuestra <strong
+                        >SCUDERIA</strong
+                    > es totalmente gratuita?
                 </p>
                 <p class="text-center text-neutral-300">
                     *No olvides realizar tu reservación en
@@ -38,6 +41,24 @@ const columnleft = scufullgas.filter((image) => image.column == "left");
                         href="https://bit.ly/3rTKTwx"
                         class="text-red-500 underline">https://bit.ly/3rTKTwx</a
                     > para visitarnos de lunes a viernes, de 14:00 hrs a 18:00 hrs.
+                </p>
+                <p
+                    class="text-center font-bold text-neutral-300 flex flex-row mt-7"
+                >
+                    <a
+                        href="https://www.facebook.com/scuderiafullgas/"
+                        class="text-center underline"
+                        ><Facebook
+                            clases="w-32 h-32 text-neutral-400 hover:text-red-500 hover:scale-110"
+                        /></a
+                    >
+                    <a
+                        href="https://www.instagram.com/scuderiafullgas/"
+                        class="text-center underline"
+                        ><Instagram
+                            clases="w-32 h-32 text-neutral-400 hover:text-red-500 hover:scale-110"
+                        /></a
+                    >
                 </p>
             </div>
             <div class="w-1/2">
@@ -187,7 +208,9 @@ const columnleft = scufullgas.filter((image) => image.column == "left");
                     loop
                     src="src/video/rally.mp4"></video>
                 <p class="text-center text-xl text-neutral-300">
-                    Uno de los eventos que apoya FullGas es el Rally Maya, en el cual participa con su propia escudería de 10 modelos clásicos. Eventos como este promueven:
+                    Uno de los eventos que apoya FullGas es el Rally Maya, en el
+                    cual participa con su propia escudería de 10 modelos
+                    clásicos. Eventos como este promueven:
                 </p>
             </div>
             <div class="flex-1 flex items-center justify-center">

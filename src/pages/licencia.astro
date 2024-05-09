@@ -1,0 +1,83 @@
+---
+import { Image, Picture } from "astro:assets";
+import Parallax from "../components/Parallax.astro";
+import Layout from "../layouts/Layout.astro";
+import logo2 from "../img/logo2.png";
+import FullPower from "../img/fullpower.png";
+import Card from "../components/Card.astro";
+import ChartBar from "../icons/ChartBar.astro";
+import GraduationHat from "../icons/GraduationHat.astro";
+import Users from "../icons/Users.astro";
+import SectionImageRigth from "../components/SectionImageRight.astro";
+import img03 from "../img/img03.jpg";
+import img04 from "../img/img04.jpg";
+import SectionImageLeft from "../components/SectionImageLeft.astro";
+import DetailsContainer from "../components/DetailsContainer.astro";
+import DetailElement from "../components/DetailElement.astro";
+---
+<Layout title="Licencias">
+    <section class="mt-3">
+        <Parallax fondo="/src/img/backgrounds/bg03.jpg">
+            <div class=" max-w-7xl m-auto my-24 sm:my-32">
+                <h2 class="text-slate-200 text-3xl sm:text-5xl ">Súmate y administra</h2>
+                <h1 class="text-red-500 text-6xl sm:text-8xl font-semibold">Tú patrimonio</h1>
+            </div>
+        </Parallax>
+    </section>
+    <section>
+        <div class="max-w-7xl m-auto text-balance text-slate-300 my-8 flex flex-col gap-12 sm:gap-14 p-3 sm:p-2">
+            <div>
+                <h2 class="font-semibold text-3xl mb-2">Licencia de uso de marca</h2>
+                <p class="text-lg">FullGas, a través del programa “Administra tu Patrimonio”, comparte su infraestructura con los empresarios gasolineros. Este programa permite a los dueños mantener la propiedad de sus gasolineras a la par de integrarlas a una sólida estructura operativa con gran alcance y solidez mediante una sociedad de negocio.</p>
+            </div>
+            <div class="flex flex-wrap gap-8 justify-evenly items-center">
+                <figure class="max-w-72">
+                    <Image src={logo2} alt="logo fullgas"/>
+                </figure>
+                <figure class="max-w-72">
+                    <Image src={FullPower} alt="Full Power"/>
+                </figure>
+            </div>
+        </div>
+    </section>
+    <section class="bg-red-600 py-8">
+        <div class="max-w-7xl m-auto text-balance text-red-50 grid grid-cols-1 md:grid-cols-3 gap-3 divide-y md:divide-y-0 divide-red-800">
+            <Card title="Presencia que nos hace rentables">
+                <ChartBar clases="size-12" slot="icon"/>
+                <p slot="content">
+                    FullGas opera con más de 100 estaciones en México y Centroamérica. Gracias a su sólida estructura logra mejores negociaciones de precios con proveedores, economías de escala y procesos altamente sistematizados con lo que se reducen los costos y se maximiza la eficiencia.
+                </p>
+            </Card>
+            <Card title="Experiencia energética">
+                <GraduationHat clases="size-12" slot="icon"/>
+                <p slot="content">
+                    FullGas cuenta con la expertise del sector energético y libre comercio.
+                </p>
+            </Card>
+            <Card title="Agentes expertos">
+                <Users clases="size-12" slot="icon"/>
+                <p slot="content">
+                    FullGas cuenta con un amplio equipo de Operaciones, Auditoría, Servicio al Cliente, Jurídico, Marketing, Tecnologías de la Información y procesos que aseguran rentabilidad a los socios y una experiencia siempre grata y hospitalaria.
+                </p>
+            </Card>
+        </div>
+    </section>
+    <SectionImageRigth tittle="¿Cómo funciona el programa?">
+        <Picture src={img03} slot="image" alt="" class="rounded-md overflow-hidden"/>
+        <DetailsContainer slot="list" clases="mt-6">
+            <DetailElement text="Mantienes la propiedad de tu negocio."/>
+            <DetailElement text="Sin preocupacón de los sistemas de administración y tecnología."/>
+            <DetailElement text="Maximiza tus utilidades por escala y volúmen."/>
+            <DetailElement text="Especialistas en lógistica de almacenamiento y distribución."/>
+        </DetailsContainer>
+    </SectionImageRigth>
+    <SectionImageLeft tittle="Ventajas del programa">
+        <Picture src={img04} slot="image" alt="" class="rounded-md overflow-hidden"/>
+        <DetailsContainer slot="list" clases="mt-6">
+            <DetailElement text="Maximizas la rentabilidad de tú propiedad."/>
+            <DetailElement text="Patrimonio respaldado por una empresa global con experiencia."/>
+            <DetailElement text="Contratos flexibles y sin penalizaciones."/>
+            <DetailElement text="Nos encargamos de todos los aspectos operativos, logísticos y jurídicos."/>
+        </DetailsContainer>
+    </SectionImageLeft>
+</Layout>

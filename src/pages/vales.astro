@@ -1,12 +1,65 @@
 ---
+import { Picture } from "astro:assets";
 import Parallax from "../components/Parallax.astro";
+import CreditCar from "../icons/CreditCar.astro";
 import Layout from "../layouts/Layout.astro";
+import img01 from '../img/img01.jpg';
+import img02 from '../img/img02.png';
+import Check from "../icons/check.astro";
+import SectionImageLeft from "../components/SectionImageLeft.astro";
+import SectionImageRigth from "../components/SectionImageRight.astro";
+import DetailsContainer from "../components/DetailsContainer.astro";
+import DetailElement from "../components/DetailElement.astro";
 ---
 <Layout title="Vales y tarjetas">
 
-    <section class=" max-w-7xl m-auto border">
-        <Parallax bg="">
-
+    <section class="mt-3">
+        <Parallax fondo="/src/img/backgrounds/bg01.jpg">
+            <h1 class="text-slate-200 text-center font-semibold text-3xl my-32">
+                <em>"Tu aliado para llenar de energía a tu flotilla y vehículos empresariales"</em>
+            </h1>
         </Parallax>
     </section>
-</Layout>
+    <section>
+        <Parallax fondo="/src/img/backgrounds/bg02.jpg">
+            <div class="my-28 font-semibold">
+                <div class="text-gray-200 flex flex-col sm:flex-row gap-4 items-center justify-center">
+                    <CreditCar clases="size-20 min-w-20"/>
+                    <p class="max-w-4xl text-slate-300 text-center sm:text-balance text-lg">
+                        Trabajamos con diferentes tecnologías que facilitan la compra de combustible; desde vales prepagados hasta targetas inteligentes, los cuales facilitan asignar y controlar presupuestos de consumo a nuestros clientes.
+                    </p>
+                </div>
+                <div class="text-center mt-4 pt-4 sm:pt-0">
+                    <a href="http://enpuntomovil.com:6099/" target="_blank" class="bg-red-700 hover:bg-red-600 text-red-100 rounded-md px-4 py-3 transition-colors duration-300">Panel de control de viajes</a>
+                </div>
+            </div>
+        </Parallax>
+    </section>
+    <SectionImageLeft tittle="Vales de gasolina">
+        <Picture src={img01} slot="image" alt="vales" class="rounded-md overflow-hidden"/>
+        <p slot="description" class="text-lg mb-6">
+            Nuestros vales prepago son la mejor opción del mercado, ya que brindan los siguientes beneficios:
+        </p>
+        <DetailsContainer slot="list">
+            <DetailElement text="0% de comisión."/>
+            <DetailElement text="Controladores de seguridad que evitan duplicidad y falsificaciones."/>
+            <DetailElement text="Deducible 100% ante el SAT."/>
+            <DetailElement text="Facturación en base a tus necesidades."/>
+            <DetailElement text="Entrega inmediata."/>
+        </DetailsContainer>
+    </SectionImageLeft>
+    <SectionImageRigth tittle="Tarjetas de gasolina">
+        <p class="text-lg mb-6" slot="description">
+            Éste ha sido por años , uno de los beneficios más grandes de FullGas, ya que estas tarjetas permiten establecer ciertos montos para cada uno de los choferes de una empresa o manejar tarjetas abiertas.
+        </p>
+        <DetailsContainer slot="list">
+            <DetailElement text="Sin comisión."/>
+            <DetailElement text="Sin Costo de expedición o sustitución."/>
+            <DetailElement text="Comprobante electrónico de carga en litros y monto."/>
+            <DetailElement text="Permisos establecidos y carga libre."/>
+            <DetailElement text="Consulta de rendimientos y consumos a través de internet."/>
+            <DetailElement text="Tranferencia de saldos entre tarjetas."/>
+        </DetailsContainer>
+        <Picture src={img02} slot="image" alt="tarjeta" class="rounded-md overflow-hidden drop-shadow-md"/>
+    </SectionImageRigth>
+</Layout

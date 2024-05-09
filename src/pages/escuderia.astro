@@ -1,0 +1,199 @@
+---
+import Close from "../icons/Close.astro";
+import Aleft from "../icons/arrow_left.astro";
+import Aright from "../icons/arrow_right.astro";
+import Gallery from "../components/Gallery.astro";
+import Layout from "../layouts/Layout.astro";
+import OfertaRally from "../components/OfertaRally.astro";
+import HeroAlt from "../components/HeroAlt.astro";
+import Parallax from "../components/Parallax.astro";
+import { images } from "../constants/images";
+const scufullgas = images.filter((image) => image.category === "scu");
+const columnright = scufullgas.filter((image) => image.column == "right");
+const columnmiddle = scufullgas.filter((image) => image.column == "middle");
+const columnmiddle2 = scufullgas.filter((image) => image.column == "middle2");
+const columnleft = scufullgas.filter((image) => image.column == "left");
+---
+
+<Layout title="Escudería">
+    <Parallax fondo="/src/img/escuderia.jpg">
+        <h1 class="text-slate-200 text-center font-semibold my-32">
+            <p class="mb-7 text-2xl invisible">lorem</p>
+            <p class="mt-7 font-bold text-5xl invisible">lorem</p>
+            <p class="mb-7 text-2xl invisible">lorem</p>
+            <p class="mt-7 font-bold text-5xl invisible">lorem</p>
+        </h1>
+    </Parallax>
+    <HeroAlt>
+        <div class="flex max-h-auto max-w-auto rounded-2xl gap-4">
+            <div class="w-1/2 flex items-center justify-center flex-col">
+                <!-- Contenido de la columna izquierda -->
+                <p class="text-center font-bold text-3xl text-neutral-300">
+                    ¿Sabías que la entrada a nuestra Scuderia es totalmente
+                    gratuita?
+                </p>
+                <p class="text-center text-neutral-300">
+                    *No olvides realizar tu reservación en
+                    <a
+                        href="https://bit.ly/3rTKTwx"
+                        class="text-red-500 underline">https://bit.ly/3rTKTwx</a
+                    > para visitarnos de lunes a viernes, de 14:00 hrs a 18:00 hrs.
+                </p>
+            </div>
+            <div class="w-1/2">
+                <!-- Contenido de la columna derecha -->
+                <video
+                    class="object-center object-cover rounded-2xl h-full w-full lg:w-auto"
+                    autoplay
+                    muted
+                    loop
+                    src="src/video/salaexhibicion.mp4"></video>
+            </div>
+        </div>
+    </HeroAlt>
+    <Gallery
+        title="GALERÍA DE AUTOS"
+        subTitle="Fullgas continuamente apoya eventos relacionados con el deporte motor."
+    >
+        <style>
+            .carousel {
+                display: none;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: transparent;
+                padding: 1rem;
+                z-index: 9999;
+                width: 80%;
+                max-width: 800px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .carousel img {
+                max-width: 100%;
+                max-height: 500px;
+                object-fit: contain;
+                border-radius: 0.5rem;
+                display: block;
+                margin: 0 auto;
+            }
+        </style>
+        <div class="grid gap-4">
+            {
+                columnright.map((image) => (
+                    <div>
+                        <img
+                            class={image.clase}
+                            src={image.cover}
+                            alt={image.attribute}
+                            loading="lazy"
+                        />
+                    </div>
+                ))
+            }
+        </div>
+        <div class="grid gap-4">
+            {
+                columnmiddle.map((image) => (
+                    <div>
+                        <img
+                            class={image.clase}
+                            src={image.cover}
+                            alt={image.attribute}
+                            loading="lazy"
+                        />
+                    </div>
+                ))
+            }
+        </div>
+        <div class="grid gap-4">
+            {
+                columnmiddle2.map((image) => (
+                    <div>
+                        <img
+                            class={image.clase}
+                            src={image.cover}
+                            alt={image.attribute}
+                            loading="lazy"
+                        />
+                    </div>
+                ))
+            }
+        </div>
+        <div class="grid gap-4">
+            {
+                columnleft.map((image) => (
+                    <div>
+                        <img
+                            class={image.clase}
+                            src={image.cover}
+                            alt={image.attribute}
+                            loading="lazy"
+                        />
+                    </div>
+                ))
+            }
+        </div>
+        <div id="carousel" class="carousel">
+            <button
+                id="closeButton"
+                class="close-button absolute right-0 top-0 m-4 px-4 py-2 bg-gray-800 text-white rounded"
+            >
+                <Close clases="w-12 h-12 text-neutral-300" />
+            </button>
+            <img
+                id="carousel-image"
+                class="h-auto max-w-full rounded-lg"
+                src=""
+                alt=""
+            />
+            <p
+                id="carousel-description"
+                class="bg-gray-700/50 p-2 rounded-sm text-neutral-100 font-bold text-2xl uppercase"
+            >
+            </p>
+            <button
+                class="absolute top-1/2 left-2 transform -translate-y-1/2"
+                id="prevButton"
+            >
+                <Aleft
+                    clases="w-24 h-24 bg-none text-gray-300 rounded-full hover:text-red-500 hover:bg-gray-100/50"
+                />
+            </button>
+            <button
+                class="absolute top-1/2 right-2 transform -translate-y-1/2"
+                id="nextButton"
+            >
+                <Aright
+                    clases="w-24 h-24 bg-none text-gray-300 rounded-full hover:text-red-500 hover:bg-gray-100/50"
+                />
+            </button>
+        </div>
+        <script>
+            import "../constants/carousel.js";
+        </script>
+    </Gallery>
+    <HeroAlt>
+        <div class="flex flex-col h-screen">
+            <div class="flex-1 flex items-center justify-center flex-col">
+                <!-- Contenido de la columna hacia arriba -->
+                <video
+                    class="object-center object-cover rounded-2xl h-[450px] w-[450px] lg:w-auto"
+                    autoplay
+                    muted
+                    loop
+                    src="src/video/rally.mp4"></video>
+                <p class="text-center text-xl text-neutral-300">
+                    Uno de los eventos que apoya FullGas es el Rally Maya, en el cual participa con su propia escudería de 10 modelos clásicos. Eventos como este promueven:
+                </p>
+            </div>
+            <div class="flex-1 flex items-center justify-center">
+                <!-- Contenido de la columna hacia abajo -->
+                <OfertaRally />
+            </div>
+        </div>
+    </HeroAlt>
+</Layout>

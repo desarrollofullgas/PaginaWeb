@@ -95,5 +95,102 @@ export const images =[
         action: 'openCarousel(11)',
         column:'left'
     },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (14).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(0)',
+        column:'right'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (2).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(1)',
+        column:'right'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (3).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(2)',
+        column:'right'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (4).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(3)',
+        column:'middle'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (5).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(4)',
+        column:'middle'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (6).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(5)',
+        column:'middle'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (7).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(6)',
+        column:'middle2'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (8).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(7)',
+        column:'middle2'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (9).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(8)',
+        column:'middle2'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (10).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(9)',
+        column:'left'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (11).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(10)',
+        column:'left'
+    },
+    {
+        category:'scu',
+        clase:'h-auto max-w-full rounded-lg transform transition duration-300 hover:scale-110 gallery-image',
+        cover:'src/img/escuderia/escuderia (13).jpg',
+        attribute:'Personal de Excelencia 100% Capacitado.',
+        action: 'openCarousel(11)',
+        column:'left'
+    },
+
 ]
 

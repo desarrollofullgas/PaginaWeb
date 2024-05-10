@@ -1,7 +1,37 @@
 ---
-import SendMail from "../components/vue/SendMail.vue";
+import { Resend } from "resend";
 import Layout from "../layouts/Layout.astro";
+import {send} from '../services/mailService.js'
+import {main} from '../services/sentNodeMailer.js'
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+    //send();
+    main(data);
+  
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
 ---
-<Layout title="mail send">
-  <SendMail/>
+<Layout title="">
+
+  <h1>Registro</h1>
+  <form method="POST">
+    <label>
+      Usuario:
+      <input type="text" name="username" required />
+    </label>
+    <label>
+      Correo electrónico:
+      <input type="email" name="email" required />
+    </label>
+    <label>
+      Contraseña:
+      <input type="password" name="password" required minlength="6" />
+    </label>
+    <button>Enviar</button>
+  </form>
 </Layout>

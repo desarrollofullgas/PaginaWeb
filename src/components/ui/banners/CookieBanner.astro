@@ -1,0 +1,26 @@
+---
+import Close from "../../../icons/Close.astro";
+import Cookie from "../../../icons/Cookie.astro";
+---
+<div id="cookies" class="hidden z-10 sticky bottom-8 left-8 max-w-80 bg-neutral-300 p-[25px 25px 30px 25px] rounded-2xl shadow-2xl text-center">
+  <div class="flex justify-end">
+    <button id="close-cookies" class="text-neutral-700 hover:text-yellow-700">
+      <Close clases="size-10 hover:text-red-500 hover:scale-110" />
+    </button>
+  </div>
+  <div class="flex items-center justify-center mb-3">
+    <Cookie clases="size-20 text-yellow-700" />
+  </div>
+  <div class="container">
+    <div class="subcontainer">
+      <header class="font-bold text-2xl text-neutral-700">Cookies...</header>
+      <p class="text-neutral-600 mt-2">
+        Este sitio web utiliza cookies para que usted tenga la mejor experiencia en nuestro sitio web.
+      </p>
+      <div class="flex items-center justify-center mt-4">
+        <a href="" class="text-neutral-700 hover:text-yellow-700">Politica de Privacidad</a>
+        <button id="cookies-btn" class="mb-3 ml-4 px-4 py-2 bg-yellow-700 text-neutral-100 rounded-md hover:bg-yellow-600 transition duration-300">Aceptar</button>
+      </div>
+    </div>
+  </div>
+</div>

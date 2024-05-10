@@ -60,6 +60,22 @@ const columnleft = famfullgas.filter((image) => image.column == "left");
                 display: block;
                 margin: 0 auto;
             }
+            /* Estilos para el fondo desenfocado */
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(
+                    0,
+                    0,
+                    0,
+                    0.5
+                ); /* Fondo semitransparente */
+                backdrop-filter: blur(5px); /* Filtro de desenfoque */
+                z-index: 9998; /* Por debajo del carrusel */
+            }
         </style>
         <div class="grid gap-4">
             {
@@ -117,6 +133,7 @@ const columnleft = famfullgas.filter((image) => image.column == "left");
                 ))
             }
         </div>
+        <div class="overlay" id="overlay"></div>
         <div id="carousel" class="carousel">
             <button id="closeButton" class="close-button absolute right-0 top-0 m-4 px-4 py-2 bg-gray-800 text-white rounded">
                 <Close clases="w-12 h-12 text-neutral-300" />

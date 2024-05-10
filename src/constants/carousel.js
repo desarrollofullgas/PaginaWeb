@@ -6,6 +6,7 @@ document.addEventListener('astro:page-load', () => {
     const prevButton = document.getElementById('prevButton');
     const nextButton = document.getElementById('nextButton');
     const closeButton = document.getElementById('closeButton');
+    const overlay = document.getElementById('overlay'); // Capa del fondo desenfocado
     let currentIndex = null; // Inicialmente null
     
     function showCarousel(imageIndex) {
@@ -13,12 +14,15 @@ document.addEventListener('astro:page-load', () => {
         carousel.style.display = 'flex';
         carouselImage.src = galleryImages[imageIndex].src;
         carouselAlt.textContent = galleryImages[imageIndex].alt;
+        overlay.style.display = 'block'; // Mostrar el fondo desenfocado
     }
     
     function hideCarousel() {
         currentIndex = null; // Reinicia el índice
         carousel.style.display = 'none';
+        overlay.style.display = 'none'; // Ocultar el fondo desenfocado
     }
+    
     
     function showPrevImage() {
         if (currentIndex !== null) {

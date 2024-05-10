@@ -1,65 +1,29 @@
-<section class="grid gap-24 md:grid-cols-3 md:gap-16 mt-12">
-    <article class="flex flex-col items-center justify-center text-center" >
-        <div class="w-32 h-32 flex justify-center items-center  p-1 rounded-sm mb-6 hover:animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-plane" width="128" height="128" viewBox="0 0 24 24" stroke-width="1" stroke="#ffff00" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M16 10h4a2 2 0 0 1 0 4h-4l-4 7h-3l2 -7h-4l-2 2h-3l2 -4l-2 -4h3l2 2h4l-2 -7h3z" />
-              </svg>
-        </div>
-        <h2>
-            <span
-                id="estaciones"
-                class="flex text-neutral-100 text-xl font-extrabold items-center justify-center text-center mb-2"
-                >TURISMO</span
-            >
-            <span class="inline-flex font-semibold bg-clip-text text-white mb-2"
-                >Durante más de 7 días los participantes descubren la belleza de la península de Yucatán, conduciendo fuera de las rutas convencionales lo que los conecta con los pequeños poblados llenos de belleza natural y la calidez de su gente.</span
-            >
-        </h2>
-    </article>
-    <article class="flex flex-col items-center justify-center text-center" >
-        <div class="w-32 h-32 flex justify-center items-center  p-1 rounded-sm mb-6 hover:animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-recycle" width="128" height="128" viewBox="0 0 24 24" stroke-width="1" stroke="#ffff00" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M12 17l-2 2l2 2" />
-                <path d="M10 19h9a2 2 0 0 0 1.75 -2.75l-.55 -1" />
-                <path d="M8.536 11l-.732 -2.732l-2.732 .732" />
-                <path d="M7.804 8.268l-4.5 7.794a2 2 0 0 0 1.506 2.89l1.141 .024" />
-                <path d="M15.464 11l2.732 .732l.732 -2.732" />
-                <path d="M18.196 11.732l-4.5 -7.794a2 2 0 0 0 -3.256 -.14l-.591 .976" />
-              </svg>
-        </div>
-        <h2>
-            <span
-                id="employees"
-                class="flex text-neutral-100 text-xl font-extrabold items-center justify-center text-center mb-2"
-                >ECOLOGÍA</span
-            >
-            <span class="inline-flex font-semibold bg-clip-text text-white mb-2"
-                >Tan solo en la península de Yucatan hay más especies de aves que en todo Europa. Este contacto con la fauna , vegetación y lugares como cenotes y playas cristalinas lleva a la reflexión del equilibrio que debemos preservar.</span
-            >
-        </h2>
-    </article>
-    <article class="flex flex-col items-center justify-center text-center" >
-        <div class="w-32 h-32 flex justify-center items-center  p-1 rounded-sm mb-6 hover:animate-bounce">
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-ambulance" width="128" height="128" viewBox="0 0 24 24" stroke-width="1" stroke="#ffff00" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
-                <path d="M5 17h-2v-11a1 1 0 0 1 1 -1h9v12m-4 0h6m4 0h2v-6h-8m0 -5h5l3 5" />
-                <path d="M6 10h4m-2 -2v4" />
-              </svg>
-        </div>
-        <h2>
-            <span
-                id="employees"
-                class="flex text-neutral-100 text-xl font-extrabold items-center justify-center text-center mb-2"
-                >SEGURIDAD VIAL</span
-            >
-            <span class="inline-flex font-semibold bg-clip-text text-white mb-2"
-                >La iniciativa detrás de BeeSafe refleja nuestro compromiso inquebrantable con la seguridad en las carreteras, y busca fomentar una cultura de responsabilidad y atención plena al conducir. Fullgas BeeSfe.</span
-            >
-        </h2>
-    </article>
-    
+---
+import Card from "../components/Card.astro";
+import Airplane from "../icons/Airplane.astro";
+import Car from "../icons/Car.astro";
+import Recycle from "../icons/Recycle.astro";
+---
+
+<section class="bg-red-600 py-4">
+    <div class="max-w-7xl m-auto text-balance text-red-50 grid grid-cols-1 md:grid-cols-3 gap-3 divide-y md:divide-y-0 divide-red-800">
+        <Card title="TURISMO">
+            <Airplane clases="size-12" slot="icon"/>
+            <p slot="content">
+                Durante más de 7 días los participantes descubren la belleza de la península de Yucatán, conduciendo fuera de las rutas convencionales lo que los conecta con los pequeños poblados llenos de belleza natural y la calidez de su gente.
+            </p>
+        </Card>
+        <Card title="ECOLOGÍA">
+            <Recycle clases="size-12" slot="icon"/>
+            <p slot="content">
+                Tan solo en la península de Yucatan hay más especies de aves que en todo Europa. Este contacto con la fauna , vegetación y lugares como cenotes y playas cristalinas lleva a la reflexión del equilibrio que debemos preservar.
+            </p>
+        </Card>
+        <Card title="SEGURIDAD VÍAL">
+            <Car clases="size-12 text-center" slot="icon"/>
+            <p slot="content">
+                La iniciativa detrás de BeeSafe refleja nuestro compromiso inquebrantable con la seguridad en las carreteras, y busca fomentar una cultura de responsabilidad y atención plena al conducir.
+            </p>
+        </Card>
+    </div>
 </section>

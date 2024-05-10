@@ -27,20 +27,22 @@ const columnleft = scufullgas.filter((image) => image.column == "left");
         </h1>
     </Parallax>
     <HeroAlt>
-        <div class="flex max-h-auto max-w-auto rounded-2xl gap-4">
-            <div class="w-1/2 flex items-center justify-center flex-col">
+        <div
+            class="flex flex-col lg:flex-row max-h-auto max-w-auto rounded-2xl gap-4"
+        >
+            <div class="lg:w-1/2 flex items-center justify-center flex-col">
                 <!-- Contenido de la columna izquierda -->
                 <p class="text-center font-bold text-3xl text-neutral-300">
-                    ¿Sabías que la entrada a nuestra <strong
-                        >SCUDERIA</strong
-                    > es totalmente gratuita?
+                    ¿Sabías que la entrada a nuestra <strong>SCUDERIA</strong> es
+                    totalmente gratuita?
                 </p>
                 <p class="text-center text-neutral-300">
                     *No olvides realizar tu reservación en
                     <a
                         href="https://bit.ly/3rTKTwx"
                         class="text-red-500 underline">https://bit.ly/3rTKTwx</a
-                    > para visitarnos de lunes a viernes, de 14:00 hrs a 18:00 hrs.
+                    >
+                    para visitarnos de lunes a viernes, de 14:00 hrs a 18:00 hrs.
                 </p>
                 <p
                     class="text-center font-bold text-neutral-300 flex flex-row mt-7"
@@ -48,20 +50,22 @@ const columnleft = scufullgas.filter((image) => image.column == "left");
                     <a
                         href="https://www.facebook.com/scuderiafullgas/"
                         class="text-center underline"
-                        ><Facebook
-                            clases="w-32 h-32 text-neutral-400 hover:text-red-500 hover:scale-110"
-                        /></a
                     >
+                        <Facebook
+                            clases="w-32 h-32 text-neutral-400 hover:text-red-500 hover:scale-110"
+                        />
+                    </a>
                     <a
                         href="https://www.instagram.com/scuderiafullgas/"
                         class="text-center underline"
-                        ><Instagram
-                            clases="w-32 h-32 text-neutral-400 hover:text-red-500 hover:scale-110"
-                        /></a
                     >
+                        <Instagram
+                            clases="w-32 h-32 text-neutral-400 hover:text-red-500 hover:scale-110"
+                        />
+                    </a>
                 </p>
             </div>
-            <div class="w-1/2">
+            <div class="lg:w-1/2">
                 <!-- Contenido de la columna derecha -->
                 <video
                     class="object-center object-cover rounded-2xl h-full w-full lg:w-auto"
@@ -213,10 +217,7 @@ const columnleft = scufullgas.filter((image) => image.column == "left");
                     clásicos. Eventos como este promueven:
                 </p>
             </div>
-            <div class="flex-1 flex items-center justify-center">
-                <!-- Contenido de la columna hacia abajo -->
-                <OfertaRally />
-            </div>
         </div>
     </HeroAlt>
+    <OfertaRally />
 </Layout>

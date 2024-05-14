@@ -26,13 +26,8 @@ const columnleft = famfullgas.filter((image) => image.column == "left");
             <p class="mt-7 font-bold text-5xl">¡Es nuestra gran diferencia!</p>
         </h1>
     </Parallax>
-    <HeroAlt>
-        <div class="flex flex-wrap items-center justify-center gap-2 px-2 py-5">
-            <div class="mx-auto max-w-xl px-6 lg:px-8">
-                <OfertaServicios />
-            </div>
-        </div>
-    </HeroAlt>
+    
+    <OfertaServicios />
 
     <Gallery title="FULLGAS CONTIGO..." subTitle="">
         <style>
@@ -135,7 +130,10 @@ const columnleft = famfullgas.filter((image) => image.column == "left");
         </div>
         <div class="overlay" id="overlay"></div>
         <div id="carousel" class="carousel">
-            <button id="closeButton" class="close-button absolute right-0 top-0 m-4 px-4 py-2 bg-gray-800 text-white rounded">
+            <button
+                id="closeButton"
+                class="close-button absolute right-0 top-0 m-4 px-4 py-2 bg-gray-800 text-white rounded"
+            >
                 <Close clases="w-12 h-12 text-neutral-300" />
             </button>
             <img
@@ -144,13 +142,23 @@ const columnleft = famfullgas.filter((image) => image.column == "left");
                 src=""
                 alt=""
             />
-            <p id="carousel-description" class="bg-gray-700/50 p-2 rounded-sm text-neutral-100 font-bold text-2xl uppercase"></p>
-            <button class="absolute top-1/2 left-2 transform -translate-y-1/2" id="prevButton">
+            <p
+                id="carousel-description"
+                class="bg-gray-700/50 p-2 rounded-sm text-neutral-100 font-bold text-2xl uppercase"
+            >
+            </p>
+            <button
+                class="absolute top-1/2 left-2 transform -translate-y-1/2"
+                id="prevButton"
+            >
                 <Aleft
                     clases="w-24 h-24 bg-none text-gray-300 rounded-full hover:text-red-500 hover:bg-gray-100/50"
                 />
             </button>
-            <button class="absolute top-1/2 right-2 transform -translate-y-1/2" id="nextButton">
+            <button
+                class="absolute top-1/2 right-2 transform -translate-y-1/2"
+                id="nextButton"
+            >
                 <Aright
                     clases="w-24 h-24 bg-none text-gray-300 rounded-full hover:text-red-500 hover:bg-gray-100/50"
                 />

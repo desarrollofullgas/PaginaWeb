@@ -5,14 +5,13 @@ interface Props {
 
 const { title} = Astro.props;
 ---
-<div class="px-3 sm:px-2 pt-2 md:pt-0 flex flex-col gap-2">
-	<div class="bg-red-50 rounded-full text-red-500 w-fit p-3">
-		<slot name="icon"/>
-	</div>
-	<h2 class=" font-medium text-3xl">{title}</h2>
-	<div class="text-balance text-lg mt-2">
-		<slot name="content"/>
-	</div>
+<div class="px-3 sm:px-2 pt-2 md:pt-0 flex flex-col items-center gap-2">
+    <div class="bg-red-50 rounded-full w-fit p-3 flex items-center justify-center">
+        <slot name="icon"/>
+    </div>
+    <h2 class="font-medium text-3xl text-center">{title}</h2>
+    <div class="text-balance text-lg mt-2 text-center">
+        <slot name="content"/>
+    </div>
 </div>
-
 

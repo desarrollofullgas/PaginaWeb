@@ -1,47 +1,25 @@
-<section class="grid gap-24 md:grid-cols-3 md:gap-16">
-    <article >
-        <div class="w-32 h-32 flex justify-center items-center bg-neutral-300 p-1 rounded-sm mb-6">
-            <img src="src/img/conferencias.png" alt="">
-        </div>
-        <h2>
-            <span
-                id="estaciones"
-                class="flex text-neutral-100 text-xl font-extrabold mb-2"
-                >CAPACITACIÓN</span
-            >
-            <span class="inline-flex font-semibold bg-clip-text text-white mb-2"
-                >En cada una de nuestras gasolineras.</span
-            >
-        </h2>
-    </article>
-    <article >
-        <div class="w-32 h-32 flex justify-center items-center bg-neutral-300 p-1 rounded-sm mb-6">
-            <img src="src/img/relacion.png" alt="">
-        </div>
-        <h2>
-            <span
-                id="employees"
-                class="flex text-neutral-100 text-xl font-extrabold mb-2"
-                >AUDITORÍA</span
-            >
-            <span class="inline-flex font-semibold bg-clip-text text-white mb-2"
-                >En cada una de nuestras gasolineras.</span
-            >
-        </h2>
-    </article>
-    <article>
-        <div class="w-32 h-32 flex justify-center items-center bg-neutral-300 p-1 rounded-sm mb-6">
-            <img src="src/img/pago.png" alt="">
-        </div>
-        <h2>
-            <span
-                id="countries"
-                class="flex text-neutral-100 text-xl font-extrabold mb-2"
-                >INCENTIVOS</span
-            >
-            <span class="inline-flex font-semibold bg-clip-text text-white mb-2"
-                >Contamos con programas de incentivos a colaboradores destacados</span
-            >
-        </h2>
-    </article>
+---
+import Card from "../components/Card.astro";
+---
+<section class="bg-neutral-200 py-4">
+    <div class="max-w-7xl m-auto text-balance text-neutral-700 grid grid-cols-1 md:grid-cols-3 gap-3 divide-y md:divide-y-0 divide-neutral-800">
+        <Card title="CAPACITACIÓN" >
+            <img src="src/img/servicios/conferencias.png" class="size-24" slot="icon"/>
+            <p slot="content">
+                En cada una de nuestra gasolineras.
+            </p>
+        </Card>
+        <Card title="AUDITORÍA">
+            <img src="src/img/servicios/relacion.png" class="size-24" slot="icon"/>
+            <p slot="content">
+                En cada una de nuestra gasolineras.
+            </p>
+        </Card>
+        <Card title="INCENTIVOS">
+            <img src="src/img/servicios/pago.png" class="size-24" slot="icon"/>
+            <p slot="content">
+                Contamos con programas de incentivos a colaboradores destacados.
+            </p>
+        </Card>
+    </div>
 </section>

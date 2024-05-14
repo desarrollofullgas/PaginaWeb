@@ -8,9 +8,9 @@ import HeroSection from "../components/HeroSection.astro";
 import AboutUs from "../components/about/AboutUs.astro";
 import Layout from "../layouts/Layout.astro";
 import NewsNav from "../components/NewsNav.astro";
-import newone from "../img/NOTICIA1.jpg";
-import newtwo from "../img/NOTICIA2.jpg";
-import newthree from "../img/NOTICIA3.jpg";
+import newone from "../img/noticias/NOTICIA1.jpg";
+import newtwo from "../img/noticias/NOTICIA2.jpg";
+import newthree from "../img/noticias/NOTICIA3.jpg";
 ---
 
 <Layout title="FullGas">
@@ -51,38 +51,18 @@ import newthree from "../img/NOTICIA3.jpg";
 		</div>
 	</CountSection>
 	<EnlaceLF thirdBtn="Más Información" thirdBtnURL="/licencia" />
-	<NewsNav
-		title=`NOTICIAS <span class="text-red-500 dark:text-red-400">FULLGAS</span>.`
-		tabs={[
-			{
-				heading:
-					"CIERRAN GASOLINERA DE EMPRESA MEXICANA POR VOLCÁN EN GUATEMALA",
-				content:
-					"La reapertura de su gasolinera dependerá del visto bueno de Protección Civil, que revisará las instalaciones y les ayudará a retirar la ceniza de la estación.",
-				svg: "tools",
-				src: newone,
-				alt: "FULLGAS ERUPCION VOLCAN GUATEMALA",
-				first: true,
-			},
-			{
-				heading:
-					"FULLGAS VA POR PEQUEÑOS GASOLINEROS: LANZA SU PROPIA LICENCIA.",
-				content:
-					"Su meta es abanderar a 360 gasolineras del país con sus colores. Para lograrlo, desembolsará 70 millones de dólares en un plazo de cinco años.",
-				svg: "dashboard",
-				src: newtwo,
-				alt: "LICENCIA FULLGAS",
-				second: true,
-			},
-			{
-				heading:
-					"FULLGAS TAMBIEN VA A LA GUERRA LANZA SU MARCA DE GASOLINERAS",
-				content:
-					"La primera fase incluye 10 estaciones nuevas. En agosto, 15 más cambiarán su bandera.",
-				svg: "house",
-				src: newthree,
-				alt: "FULLGAS MARCAS",
-			},
-		]}
-	/>
+	
+	<NewsNav title="NOTICIAS" subtitle="FULLGAS"
+	head1="FULLGAS"
+	image1="background-image: url('src/img/noticias/NOTICIA1.jpg');"
+	content1="CIERRAN GASOLINERA DE EMPRESA MEXICANA POR VOLCÁN EN GUATEMALA"
+	url1="https://www.forbes.com.mx/empresa-mexicana-cierra-una-gasolinera-por-erupcion-en-guatemala/"
+	head2="FULLGAS"
+	image2="background-image: url('src/img/noticias/NOTICIA3.jpg');"
+	content2="FULLGAS TAMBIEN VA A LA GUERRA LANZA SU MARCA DE GASOLINERAS"
+	url2="https://www.forbes.com.mx/fullgas-tambien-va-a-la-guerra-lanza-su-marca-de-gasolineras/"
+	head3="FULLGAS"
+	image3="background-image: url('src/img/noticias/NOTICIA2.jpg');"
+	content3="FULLGAS MANTIENEN PLAN DE GASOLINERAS CON CHEINOL"
+	url3="https://www.forbes.com.mx/fullgas-va-por-pequenos-gasolineros-lanza-su-propia-licencia/"/>
 </Layout>

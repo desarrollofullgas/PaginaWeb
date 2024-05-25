@@ -14,10 +14,11 @@ import img04 from "../img/img04.jpg";
 import SectionImageLeft from "../components/SectionImageLeft.astro";
 import DetailsContainer from "../components/DetailsContainer.astro";
 import DetailElement from "../components/DetailElement.astro";
+import Award from "../icons/Award.astro";
 ---
 <Layout title="Licencias">
     <section class="mt-3">
-        <Parallax fondo="/src/img/backgrounds/bg03.jpg">
+        <Parallax fondo="/src/img/backgrounds/bg06.webp">
             <div class=" max-w-7xl m-auto my-24 sm:my-32">
                 <h2 class="text-slate-200 text-3xl sm:text-5xl ">Súmate y administra</h2>
                 <h1 class="text-red-500 text-6xl sm:text-8xl font-semibold">Tú patrimonio</h1>
@@ -27,7 +28,10 @@ import DetailElement from "../components/DetailElement.astro";
     <section>
         <div class="max-w-7xl m-auto text-balance text-slate-300 my-8 flex flex-col gap-12 sm:gap-14 p-3 sm:p-2">
             <div>
-                <h2 class="font-semibold text-3xl mb-2">Licencia de uso de marca</h2>
+                <div class="flex gap-2 items-center mb-3 text-amber-500">
+                    <Award clases="size-10 min-w-10"/>
+                    <h2 class="font-semibold text-3xl">Licencia de uso de marca</h2>
+                </div>
                 <p class="text-lg">FullGas, a través del programa “Administra tu Patrimonio”, comparte su infraestructura con los empresarios gasolineros. Este programa permite a los dueños mantener la propiedad de sus gasolineras a la par de integrarlas a una sólida estructura operativa con gran alcance y solidez mediante una sociedad de negocio.</p>
             </div>
             <div class="flex flex-wrap gap-8 justify-evenly items-center">
@@ -63,7 +67,7 @@ import DetailElement from "../components/DetailElement.astro";
         </div>
     </section>
     <SectionImageRigth tittle="¿Cómo funciona el programa?">
-        <Picture src={img03} slot="image" alt="" class="rounded-md overflow-hidden"/>
+        <Picture src={img03} slot="image" alt="" class="rounded-md overflow-hidden shadow-box-right"/>
         <DetailsContainer slot="list" clases="mt-6">
             <DetailElement text="Mantienes la propiedad de tu negocio."/>
             <DetailElement text="Sin preocupacón de los sistemas de administración y tecnología."/>
@@ -72,7 +76,7 @@ import DetailElement from "../components/DetailElement.astro";
         </DetailsContainer>
     </SectionImageRigth>
     <SectionImageLeft tittle="Ventajas del programa">
-        <Picture src={img04} slot="image" alt="" class="rounded-md overflow-hidden"/>
+        <Picture src={img04} slot="image" alt="" class="rounded-md overflow-hidden shadow-box-left"/>
         <DetailsContainer slot="list" clases="mt-6">
             <DetailElement text="Maximizas la rentabilidad de tú propiedad."/>
             <DetailElement text="Patrimonio respaldado por una empresa global con experiencia."/>
@@ -81,3 +85,11 @@ import DetailElement from "../components/DetailElement.astro";
         </DetailsContainer>
     </SectionImageLeft>
 </Layout>
+<style is:global>
+    .shadow-box-right{
+        box-shadow: 1.2rem 1.2rem rgb(30 41 59);
+    }
+    .shadow-box-left{
+        box-shadow: -1.2rem 1.2rem rgb(30 41 59);
+    }
+</style>

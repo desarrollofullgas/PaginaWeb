@@ -14,14 +14,27 @@ const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-widt
 ---
 
 <section
-  class="mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  class="relative mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
+<div class="hidden md:block absolute left-0 top-[55%] scale-90 md:top-[20%] xl:left-[10%] xl:top-[55%]">
+  <img src="src/img/about/direccion.png" class="w-36 h-36 AnimateOpacityScale" alt="">
+</div>
+<div class="hidden md:block absolute left-[85%] top-0 scale-75">
+  <img src="src/img/about/viaje.png" class="w-36 h-36 AnimateOpacityScale" alt="">
+</div>
+<div class="hidden md:block absolute bottom-[5%] left-[60%] scale-[.6] xl:bottom-[55%] xl:left-[40%]">
+  <img src="src/img/about/destino.png" class="w-36 h-36 AnimateOpacityScale" alt="">
+</div>
   <!-- Grid -->
   <div class="lg:grid lg:grid-cols-12 lg:items-center lg:gap-16">
     <div class="lg:col-span-7 AnimateOpacityScale">
       <!-- Wrap the image in a link -->
       <a href="/ubicaciones">
-        <img class="rounded-xl" src="src/img/mapa/Ubicaciones.png" alt="Ubicacion EDS por Estado"/>
+        <img
+          class="rounded-xl"
+          src="src/img/mapa/Ubicaciones.png"
+          alt="Ubicacion EDS por Estado"
+        />
       </a>
     </div>
     <div class="mt-5 sm:mt-10 lg:col-span-5 lg:mt-0">

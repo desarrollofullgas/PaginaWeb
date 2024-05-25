@@ -36,7 +36,7 @@ import DetailElement from "../components/DetailElement.astro";
         </Parallax>
     </section>
     <SectionImageLeft tittle="Vales de gasolina">
-        <Picture src={img01} slot="image" alt="vales" class="rounded-md overflow-hidden"/>
+        <Picture src={img01} slot="image" alt="vales" class="rounded-md overflow-hidden shadow-box-right"/>
         <p slot="description" class="text-lg mb-6">
             Nuestros vales prepago son la mejor opción del mercado, ya que brindan los siguientes beneficios:
         </p>
@@ -60,6 +60,14 @@ import DetailElement from "../components/DetailElement.astro";
             <DetailElement text="Consulta de rendimientos y consumos a través de internet."/>
             <DetailElement text="Tranferencia de saldos entre tarjetas."/>
         </DetailsContainer>
-        <Picture src={img02} slot="image" alt="tarjeta" class="rounded-md overflow-hidden drop-shadow-md"/>
+        <Picture src={img02} slot="image" alt="tarjeta" class="rounded-md overflow-hidden shadow-box-left"/>
     </SectionImageRigth>
-</Layout
+</Layout>
+<style is:global>
+    .shadow-box-right{
+        box-shadow: 1.2rem 1.2rem rgb(30 41 59);
+    }
+    .shadow-box-left{
+        box-shadow: -1.2rem 1.2rem rgb(30 41 59);
+    }
+</style>

@@ -26,7 +26,7 @@ interface Props {
 <section class="bg-neutral-300 dark:bg-gray-900">
   <div class="container px-6 py-10 mx-auto">
     <h1
-      class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white"
+      class="text-3xl font-bold text-gray-800 capitalize lg:text-4xl dark:text-white"
     >
       {title} <span class="underline decoration-red-500">{subtitle}</span>
     </h1>
@@ -37,26 +37,26 @@ interface Props {
       <div class="relative group">
         <!-- Imagen de fondo -->
         <div
-          class="absolute inset-0 bg-cover bg-no-repeat bg-center rounded-2xl filter group-hover:blur-sm group-hover:opacity-50"
+          class="absolute inset-0 bg-cover bg-no-repeat bg-center rounded-2xl filter group-hover:blur-sm group-hover:opacity-60"
           style={image1}
         >
         </div>
 
         <!-- Contenido -->
         <div
-          class="p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
+          class="relative p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
         >
           <span class="inline-block">
             <NewsPaper clases="w-12 h-12 text-red-500 dark:text-red-400"/>
           </span>
 
           <h1
-            class="text-2xl font-semibold text-neutral-700 capitalize dark:text-white"
+            class="text-2xl font-bold text-neutral-900 capitalize dark:text-white"
           >
             {head1}
           </h1>
 
-          <p class="text-neutral-700 dark:text-gray-300">
+          <p class="text-neutral-900 dark:text-gray-300 font-bold">
             {content1}
           </p>
 
@@ -72,14 +72,14 @@ interface Props {
       <div class="relative group">
         <!-- Imagen de fondo -->
         <div
-          class="absolute inset-0 bg-cover bg-no-repeat bg-center rounded-2xl filter group-hover:blur-sm group-hover:opacity-50"
+          class="absolute inset-0 bg-cover bg-no-repeat bg-center rounded-2xl filter group-hover:blur-sm group-hover:opacity-60"
           style={image2}
         >
         </div>
 
         <!-- Contenido -->
         <div
-          class="p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
+          class="relative p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
         >
           <span class="inline-block text-red-500 dark:text-red-400">
             <span class="inline-block">
@@ -88,12 +88,12 @@ interface Props {
           </span>
 
           <h1
-            class="text-2xl font-semibold text-neutral-700 capitalize dark:text-white"
+            class="text-2xl font-bold text-neutral-900 capitalize dark:text-white"
           >
             {head2}
           </h1>
 
-          <p class="text-neutral-700 dark:text-gray-300">
+          <p class="text-neutral-900 dark:text-gray-300 font-bold">
             {content2}
           </p>
 
@@ -109,14 +109,14 @@ interface Props {
       <div class="relative group">
         <!-- Imagen de fondo -->
         <div
-          class="absolute inset-0 bg-cover bg-no-repeat bg-center rounded-2xl filter group-hover:blur-sm group-hover:opacity-50"
+          class="absolute inset-0 bg-cover bg-no-repeat bg-center rounded-2xl filter group-hover:blur-sm group-hover:opacity-60"
           style={image3}
         >
         </div>
 
         <!-- Contenido -->
         <div
-          class="p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
+          class="relative p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
         >
           <span class="inline-block text-red-500 dark:text-red-400">
             <span class="inline-block">
@@ -125,12 +125,12 @@ interface Props {
           </span>
 
           <h1
-            class="text-2xl font-semibold text-neutral-700 capitalize dark:text-white"
+            class="text-2xl font-bold text-neutral-900 capitalize dark:text-white"
           >
             {head3}
           </h1>
 
-          <p class="text-neutral-700 dark:text-gray-300">
+          <p class="text-neutral-900 dark:text-gray-300 font-bold">
             {content3}
           </p>
 

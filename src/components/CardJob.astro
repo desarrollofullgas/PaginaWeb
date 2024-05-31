@@ -1,0 +1,25 @@
+---
+import Clock from '../icons/Clock.astro';
+import Map from '../icons/Map.astro';
+
+interface Props {
+    job:Object;
+    href:number;    
+}
+const {job,href} =Astro.props;
+---
+<div>
+    <a href={`/bolsa/${href}`} class="block bg-slate-800 p-5 rounded-lg text-balance hover:bg-slate-700 sm:hover:scale-105 transition-all duration-300">
+        <h2 class="font-medium text-2xl border-b border-slate-600 pb-1">{job.tittle}</h2>
+        <div class="mt-2 flex gap-4 text-amber-500 font-medium">
+            <div class="flex gap-2 items-center">
+                <Map clases="size-6"/>
+                <span class="">{job.location}</span>
+            </div>
+            <div class="flex gap-2 items-center">
+                <Clock clases="size-6"/>
+                <span>{job.type}</span>
+            </div>
+        </div>
+    </a>
+</div>

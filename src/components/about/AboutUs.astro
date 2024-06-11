@@ -14,12 +14,12 @@ const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-widt
 ---
 
 <section
-  class="relative mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
+  class="diagonal relative mx-auto max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 2xl:max-w-full"
 >
-<div class="hidden md:block absolute left-0 top-[55%] scale-90 md:top-[20%] xl:left-[10%] xl:top-[55%]">
+<div class="hidden md:block absolute left-0 top-[55%] scale-75 md:top-[20%] xl:left-[10%] xl:top-[55%]">
   <img src="src/img/about/direccion.png" class="w-36 h-36 AnimateOpacityScale" alt="">
 </div>
-<div class="hidden md:block absolute left-[85%] top-0 scale-75">
+<div class="hidden md:block absolute left-[10%] top-[-10%] scale-75">
   <img src="src/img/about/viaje.png" class="w-36 h-36 AnimateOpacityScale" alt="">
 </div>
 <div class="hidden md:block absolute bottom-[5%] left-[60%] scale-[.6] xl:bottom-[55%] xl:left-[40%]">
@@ -71,3 +71,26 @@ const ListItemMarker: string = `<svg fill="none" viewBox="0 0 24 24" stroke-widt
     </div>
   </div>
 </section>
+<style>
+ .diagonal {
+  --skew-angle: 5deg;
+  --background: linear-gradient(
+                  45deg, 
+                  #000000, 
+                  #000000, 
+                  #ff0000
+                );
+
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  content: '';
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+}
+</style>

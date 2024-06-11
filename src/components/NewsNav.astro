@@ -23,10 +23,10 @@ interface Props {
 }
 ---
 
-<section class="bg-neutral-300 dark:bg-gray-900">
+<section class="diagonal">
   <div class="container px-6 py-10 mx-auto">
     <h1
-      class="text-3xl font-bold text-gray-800 capitalize lg:text-4xl dark:text-white"
+      class="text-3xl font-bold text-neutral-300 lg:text-4xl "
     >
       {title} <span class="underline decoration-red-500">{subtitle}</span>
     </h1>
@@ -44,19 +44,19 @@ interface Props {
 
         <!-- Contenido -->
         <div
-          class="relative p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
+          class="relative p-8 space-y-3 border-2 border-neutral-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
         >
           <span class="inline-block">
-            <NewsPaper clases="w-12 h-12 text-red-500 dark:text-red-400"/>
+            <NewsPaper clases="w-12 h-12 text-red-500"/>
           </span>
 
           <h1
-            class="text-2xl font-bold text-neutral-900 capitalize dark:text-white"
+            class="text-2xl font-bold text-neutral-300"
           >
             {head1}
           </h1>
 
-          <p class="text-neutral-900 dark:text-gray-300 font-bold">
+          <p class="text-neutral-300 font-bold">
             {content1}
           </p>
 
@@ -79,7 +79,7 @@ interface Props {
 
         <!-- Contenido -->
         <div
-          class="relative p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
+          class="relative p-8 space-y-3 border-2 border-neutral-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
         >
           <span class="inline-block text-red-500 dark:text-red-400">
             <span class="inline-block">
@@ -88,12 +88,12 @@ interface Props {
           </span>
 
           <h1
-            class="text-2xl font-bold text-neutral-900 capitalize dark:text-white"
+            class="text-2xl font-bold text-neutral-300"
           >
             {head2}
           </h1>
 
-          <p class="text-neutral-900 dark:text-gray-300 font-bold">
+          <p class="text-neutral-300 font-bold">
             {content2}
           </p>
 
@@ -116,7 +116,7 @@ interface Props {
 
         <!-- Contenido -->
         <div
-          class="relative p-8 space-y-3 border-2 border-red-400 dark:border-red-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
+          class="relative p-8 space-y-3 border-2 border-neutral-300 rounded-xl opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out"
         >
           <span class="inline-block text-red-500 dark:text-red-400">
             <span class="inline-block">
@@ -125,12 +125,12 @@ interface Props {
           </span>
 
           <h1
-            class="text-2xl font-bold text-neutral-900 capitalize dark:text-white"
+            class="text-2xl font-bold text-neutral-300"
           >
             {head3}
           </h1>
 
-          <p class="text-neutral-900 dark:text-gray-300 font-bold">
+          <p class="text-neutral-300 font-bold">
             {content3}
           </p>
 
@@ -145,3 +145,26 @@ interface Props {
     </div>
   </div>
 </section>
+<style>
+.diagonal {
+  --skew-angle: -5deg;
+  --background: linear-gradient(
+                  45deg, 
+                  #000000, 
+                  #000000, 
+                  #ff0000
+                );
+
+  position: relative;
+  isolation: isolate;
+}
+
+.diagonal::after {
+  content: '';
+  background: var(--background);
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  transform: skewY(var(--skew-angle));
+}
+</style>

@@ -4,25 +4,25 @@ export const estaciones =[
         name:'Aguascalientes 1',
         estado:'Aguascalientes',
         direccion:'AV. ADOLFO LÓPEZ MATEOS OTE. NO. 1502, HÉROES DE AGUASCALIENTES, AGUASCALIENTES, AGUASCALIENTES, C.P. 20250',
-        fuels:['magna'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/rUq8nTBWbEyzB3DBA'
     },{
         name:'Ensenada I',
         estado:'Baja California',
         direccion:'CARRETERA TRANSPENINSULAR ENSENADA-SAN QUINTIN KM.17+200, NACIONALISTA SÁNCHEZ TABOADA EJIDO, ENSENADA, C.P. 22790',
-        fuels:['diesel'],
+        fuels:['magna','premium','diesel'],
         url:'https://maps.app.goo.gl/DMcT13WiGL2cEwN78'
     },{
         name:'Ensenada II',
         estado:'Baja California',
         direccion:'AV. AMBROSIO DEL CASTILLO, NO. 84, COL. EJIDO REAL DEL CASTILLO, ENSENADA, C.P. 22770',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','diesel'],
         url:'https://maps.app.goo.gl/EJ147w2xiPLxTjzq8'
     },{
         name:'Premier',
         estado:'Baja California',
         direccion:'CALZADA LIC. VICENTE LOMBARDO TOLEDANO NO. 1839, CONJUNTO URBANO ESPERANZA, MEXICALI, BAJA CALIFORNIA, C.P. 21350',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/yiBWbvgEPNcDmFUK7'
     },{
         name:'Rio Nuevo',
@@ -154,7 +154,7 @@ export const estaciones =[
         name:'Hermanas',
         estado:'Coahuila',
         direccion:'CARRETERA 57 KM. 43, EJIDO PRIMERO DE MAYO, ESCOBEDO, COAHUILA DE ZARAGOZA, C.P. 25470',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/siPAkpeJktEK9ik69'
     },{
         name:'Nueva Rosita II',
@@ -190,7 +190,7 @@ export const estaciones =[
         name:'Metepec',
         estado:'Estado de México',
         direccion:'AV. SOLIDARIDAD LAS TORRES 16, SAN JERÓNIMO CHICAHUALCO, METEPEC, ESTADO DE MÉXICO, C.P. 52170',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/pHgsXoNVuvQYHmpi7'
     },{
         name:'Real Granada',
@@ -226,7 +226,7 @@ export const estaciones =[
         name:'Celaya II',
         estado:'Guanajuato',
         direccion:'BLVD. ADOLFO LÓPEZ MATEOS #1006 PTE, CENTRO,CELAYA, C.P. 38046',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/qwappuFxg74DaRbZA'
     },{
         name:'Juventino',
@@ -250,13 +250,13 @@ export const estaciones =[
         name:'El palomar',
         estado:'Jalisco',
         direccion:'ADOLFO LÓPEZ MATEOS #1300 LOCAL.11 FRACCIONAMIENTO EL PALOMAR SECCIÓN JOCKEY CLUB TLAJOMULCO DE ZUÑIGA, C.P. 45643',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://goo.gl/maps/sE1CQpsg8WPbaPa59'
     },{
         name:'La Barca',
         estado:'Jalisco',
         direccion:'KM. 14.5 CARRETERA SAN ANTONIO RIVAS-LA BARCA, JALISCO, C.P. 47910',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','diesel'],
         url:'https://maps.app.goo.gl/c4ydDAU4NA6mT4pk8'
     },{
         name:'Colón',
@@ -277,7 +277,7 @@ export const estaciones =[
         fuels:['magna','premium','diesel'],
         url:'https://maps.app.goo.gl/SqW92PMTwxLuVDJJ8'
     },{
-        name:'Amalcan',
+        name:'Amalucan',
         estado:'Puebla',
         direccion:'CARRETERA FEDERAL PUEBLA -TEHUACÁN, NO. 202, COL. AMALUCAN CERRO, C. P. 72310',
         fuels:['magna','premium','diesel'],
@@ -394,13 +394,13 @@ export const estaciones =[
         name:'Obregón Centro',
         estado:'Sonora',
         direccion:'CALLE GUERRERO S/N, CENTRO, CAJEME, SONORA, C.P. 85000',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://goo.gl/maps/JJitjaaudQMTvrVUA'
     },{
         name:'Obregón Matriz',
         estado:'Sonora',
         direccion:'HIDALGO NO. 401 PTE, CENTRO, CAJEME, SONORA, C.P. 85000',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/ZgdUVh7TWwmaz5aDA'
     },{
         name:'Obregón Sur',
@@ -412,7 +412,7 @@ export const estaciones =[
         name:'Tlaxcala',
         estado:'Tlaxcala',
         direccion:'IGNACIO PICAZO NORTE NUMERO 60, CENTRO, CHIAUTEMPAN,TLAXCALA, C.P. 90800',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna'],
         url:'https://goo.gl/maps/qdfNfYw78sr5pDxv6'
     },{
         name:'El Campeón',
@@ -430,7 +430,7 @@ export const estaciones =[
         name:'Bacalar',
         estado:'Quintana Roo',
         direccion:'CALLE 4, LOTE 1, MANZANA 25, SIN COLONIA, MUNICIPIO DE BACALAR, OTHON P. BLANCO, QUINTANA ROO, C.P. 77930	',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','diesel'],
         url:'https://maps.app.goo.gl/iFjkNpTAn3kzwB7M8'
     },{
         name:'Cancún Madero',
@@ -454,7 +454,7 @@ export const estaciones =[
         name:'Ideal',
         estado:'Quintana Roo',
         direccion:'FRACCION SUROESTE (TAMBIEN CONOCIDA COMO FRACCION III) DEL PREDIO DENOMINADO SAN PEDRO, LOCALIDAD EL IDEAL, LAZARO CARDENAS, QUINTANA ROO, C.P. 77368	',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','diesel'],
         url:'https://maps.app.goo.gl/kRFW1Hc5knVkwkPi9'
     },{
         name:'José María Morelos',
@@ -514,7 +514,7 @@ export const estaciones =[
         name:'Tulum Crucero',
         estado:'Quintana Roo',
         direccion:'AV. TULUM, LOTE 02, MANZANA 3, SUPERMANZANA 10, S/C, TULUM, QUINTANA ROO, C.P. 77780',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/oDKnGZnQhX6Lvz6s9'
     },{
         name:'Tulum Zamná',
@@ -526,13 +526,13 @@ export const estaciones =[
         name:'20 de Noviembre',
         estado:'Quintana Roo',
         direccion:'AV. 20 DE NOVIEMBRE, LOTE 35, MANZANA 4, SUPERMANZANA 226, CIUDAD DE CANCUN, BENITO JUAREZ, QUINTANA ROO, C.P. 77516',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/tA1qXz9AHHEhgZDbA'
     },{
         name:'Caucel',
         estado:'Yucatán',
         direccion:'CALLE 31 #836 Y 838 FRACC. CIUDAD CAUCEL C.P 97314',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/YRMg8fsHZVyR3aCw5'
     },{
         name:'Colonia Yucatán',
@@ -544,19 +544,19 @@ export const estaciones =[
         name:'Chemax',
         estado:'Yucatán',
         direccion:'TABLAJE CATASTRAL NUMERO 4069, SIN COLONIA, CHEMAX, YUCATAN, C.P. 97770	',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/NJXiR3H8c615JNkR7'
     },{
         name:'Chuburná',
         estado:'Yucatán',
         direccion:'CALLE 20 POR 25, NO. 111, CHUBURNÁ DE HIDALGO, MÉRIDA, YUCATÁN, C. P. 97205',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/dEJD7UQGC2jHTtWz7'
     },{
         name:'El Cuyo',
         estado:'Yucatán',
         direccion:'PUERTO DE ABRIGO EL CUYO S/N, CENTRO, TIZIMÍN, YUCATÁN, C. P. 97713',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','diesel'],
         url:'https://maps.app.goo.gl/WFfDaRTdkjTA9pqZ8'
     },{
         name:'Kanasín 58',
@@ -598,7 +598,7 @@ export const estaciones =[
         name:'Muna',
         estado:'Yucatán',
         direccion:'CALLE 31 NO. 245-C, SIN COLONIA, C. P. 97930',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','diesel'],
         url:'https://maps.app.goo.gl/V6w4BKVBuzazUgex9'
     },{
         name:'Peto',
@@ -658,9 +658,9 @@ export const estaciones =[
         name:'Zací',
         estado:'Yucatán',
         direccion:'CALLE 42 NO. 142, FRACCIONAMIENTO CAMPESTRE DEL PEDREGAL, VALLADOLID, YUCATAN, C.P. 97780',
-        fuels:['magna','premium','diesel'],
+        fuels:['magna','premium'],
         url:'https://maps.app.goo.gl/d7osKRYRZ6vRUXCN9'
-    }    
+    }  
 ];
 /* ,{
     name:'',

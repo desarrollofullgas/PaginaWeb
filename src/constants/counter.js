@@ -38,5 +38,5 @@ document.addEventListener('astro:page-load', () => {
     }
 
     // Llamar a la función incrementarNumero cada segundo
-    setInterval(incrementarNumero, .04);
+    setInterval(incrementarNumero, .10000);
 });
